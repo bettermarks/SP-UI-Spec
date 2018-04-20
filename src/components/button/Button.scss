@@ -1,0 +1,109 @@
+$btn-border-width: 2px;
+$btn-padding: 2px;
+
+.btn {
+	box-sizing: border-box;
+	display: inline-flex;
+	border: $btn-border-width solid transparent;
+	border-radius: $border-radius-m;
+	text-align: center;
+	min-width: 32px;
+	cursor: pointer;
+	user-select: none;
+	align-items: center;
+	justify-content: center;
+	padding: $btn-padding*2 $btn-padding;
+	&.stretch {
+		display: flex;
+	}
+	& > .child {
+		padding: 0 $btn-padding;
+	}
+}
+
+//button sizes
+.btn-size {
+	&-xs {
+		min-height: 20px;
+		font-size: 10px;
+		line-height: 12px;
+	}
+	&-l {
+		min-height: 36px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	&-xxl {
+		min-height: 56px;
+		font-size: 24px;
+		line-height: 28px;
+		padding: 4px*2 4px;
+		& > .child {
+			padding: 0 4px;
+		}
+	}
+}
+
+//button styles
+.btn {
+	&-action {
+		color: white;
+		fill: white;
+		border-color: $c-blue-600;
+		background-color: $c-blue-600;
+		&:hover {
+			border-color: $c-blue-700;
+			background-color: $c-blue-700;
+		}
+		&:active {
+			border-color: $c-blue-500;
+			background-color: $c-blue-500;
+		}
+		&-ghost {
+			color: $c-blue-700;
+			fill: $c-blue-700;
+			border-color: $c-blue-600;
+			&:hover {
+				color: white;
+				fill: white;
+				border-color: $c-blue-600;
+				background-color: $c-blue-600;
+			}
+			&:active {
+				color: white;
+				fill: white;
+				border-color: $c-blue-500;
+				background-color: $c-blue-500;
+			}
+		}
+		&-transparent {
+			color: $c-blue-700;
+			fill: $c-blue-700;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.2);
+			}
+			&:active {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+	// end of action
+	&-disabled {
+		color: white;
+		fill: white;
+		border-color: $c-gray-300;
+		background-color: $c-gray-300;
+		cursor: default;
+		&-ghost {
+			color: $c-gray-400;
+			fill: $c-gray-400;
+			border-color: $c-gray-300;
+			cursor: default;
+		}
+		&-transparent {
+			color: $c-gray-400;
+			fill: $c-gray-400;
+			cursor: default;
+		}
+	}
+}

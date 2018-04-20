@@ -1,0 +1,111 @@
+//COLOR TABLE
+$hover-change: #222222;
+
+// stylelint-disable-next-line color-named
+$c-white: white; //you can also use "white" directly
+//$c-black: //You should never use black. Use $c-gray-800 instead
+$c-gray-800: #333333;
+$c-gray-700: #666666;
+$c-gray-600: #999999;
+$c-gray-500: #aaaaaa;
+$c-gray-400: #cccccc;
+$c-gray-300: #dddddd;
+$c-gray-200: #e9e9e9;
+$c-gray-100: #f6f6f6;
+
+$c-red-800: #bb3300;
+$c-red-700: #dd4422;
+$c-red-600: #ee6644;
+$c-red-500: #ff7766;
+$c-red-400: #ff9f8c;
+$c-red-300: #ffc3bc;
+$c-red-200: #ffe6e3;
+$c-red-100: #fff3f3;
+
+$c-green-800: #118800;
+$c-green-700: #33a300;
+$c-green-600: #55bb22;
+$c-green-500: #88d633;
+$c-green-400: #aaee88;
+$c-green-300: #c3f3b0;
+$c-green-200: #e3fcdc;
+$c-green-100: #f0ffec;
+
+$c-blue-800: #0077cc;
+$c-blue-700: #1188ee;
+$c-blue-600: #44aaff;
+$c-blue-500: #77bbff;
+$c-blue-400: #aad6ff;
+$c-blue-300: #cae6ff;
+$c-blue-200: #dff0ff;
+$c-blue-100: #eef6ff;
+
+$c-yellow-800: #997711;
+$c-yellow-700: #bf9c00;
+$c-yellow-600: #eebb22;
+$c-yellow-500: #ffd333;
+$c-yellow-400: #ffe677;
+$c-yellow-300: #fffabb;
+$c-yellow-200: #ffffdd;
+$c-yellow-100: #ffffec;
+
+$c-orange-800: #bb6600;
+$c-orange-700: #dd7711;
+$c-orange-600: #ee9911;
+$c-orange-500: #ffaa11;
+$c-orange-400: #ffbb55;
+$c-orange-300: #ffd099;
+$c-orange-200: #ffefdc;
+$c-orange-100: #fff6ec;
+
+$c-shadow-light: rgba(0, 0, 0, 0.2);
+$c-item-hover: rgba(0, 0, 0, 0.08);
+
+//BASE NAMES
+$c-text-medium: $c-gray-700;
+$c-text-dark: $c-gray-800;
+$c-text-bright: $c-gray-600;
+$c-text-link: $c-blue-700;
+$c-text-disabled: $c-gray-400;
+
+$c-text-error: $c-red-800;
+$c-text-remark: $c-yellow-800;
+$c-text-correct: $c-green-800;
+
+$c-area-border: $c-gray-500;
+$c-group-border: $c-gray-400;
+$c-element-border: $c-gray-300;
+
+$c-selected-border: $c-blue-500;
+$c-selected-background: $c-blue-200;
+$c-selected-background-hover: $c-blue-300;
+
+$c-error-border: $c-red-700;
+$c-error-background: $c-red-200;
+$c-error-background-hover: $c-red-300;
+
+$c-remark-border: $c-yellow-700;
+$c-remark-background: $c-yellow-200;
+$c-remark-background-hover: $c-yellow-300;
+
+$c-correct-border: $c-green-700;
+$c-correct-background: $c-green-200;
+$c-correct-background-hover: $c-green-300;
+
+$c-unselected-border: $c-gray-500;
+$c-unselected-background-hover: $c-gray-100;
+
+$c-disabled-border: $c-gray-300;
+$c-border-explanation: $c-blue-400;
+$c-border-answer: $c-green-500;
+
+:export {
+	// stylelint-disable property-no-unknown,property-case
+	text_correct: $c-text-correct;
+	border_correct: $c-correct-border;
+	text_error: $c-text-error;
+	border_error: $c-error-border;
+	text_remark: $c-text-remark;
+	border_remark: $c-remark-border;
+	// stylelint-enable property-no-unknown,property-case
+}
