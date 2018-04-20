@@ -4,18 +4,14 @@ $btn-padding: 2px;
 .btn {
 	box-sizing: border-box;
 	display: inline-flex;
-	border: $btn-border-width solid transparent;
-	border-radius: $border-radius-m;
 	text-align: center;
 	min-width: 32px;
-	cursor: pointer;
-	user-select: none;
 	align-items: center;
 	justify-content: center;
 	padding: $btn-padding*2 $btn-padding;
-	&.stretch {
-		display: flex;
-	}
+	border: $btn-border-width solid transparent;
+	border-radius: $border-radius-m;
+
 	& > .child {
 		padding: 0 $btn-padding;
 	}
@@ -24,20 +20,28 @@ $btn-padding: 2px;
 //button sizes
 .btn-size {
 	&-xs {
-		min-height: 20px;
+		min-height: 24px;
 		font-size: 10px;
 		line-height: 12px;
+
+		.btnWrapper.reservespace & {
+			margin: 10px 0px; //24 + 10*2 = 44
+		}
 	}
 	&-l {
 		min-height: 36px;
 		font-size: 16px;
 		line-height: 20px;
+		.btnWrapper.reservespace & {
+			margin: 4px 0px; //36 + 4*2 = 44
+		}
 	}
 	&-xxl {
 		min-height: 56px;
 		font-size: 24px;
 		line-height: 28px;
 		padding: 4px*2 4px;
+		//not necessary to reserve space because 56 > $min-clickable-height
 		& > .child {
 			padding: 0 4px;
 		}
@@ -45,31 +49,67 @@ $btn-padding: 2px;
 }
 
 //button styles
-.btn {
+.btnWrapper {
+	display: inline-flex;
+	cursor: pointer;
+	user-select: none;
+	vertical-align: middle; //align the center of the button (instead of the containing text) to the surroundings
+	position: relative; // act as a container for the clickable area
+	&.stretch {
+		display: flex;
+		.btn {
+			flex-grow: 1;
+		}
+	}
+
+	&.noreservespace {
+		margin: 0; // stop reserving space via margins
+		&::before {
+			content: "";
+			outline: 1px dashed rgba(0,0,255,0.5); //DELETE ME
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50%;
+			bottom: 0;
+			margin: 0;
+			height: $min-clickable-height;
+			transform: translateY(-50%);
+		}
+	}
+
+	&.reservespace {
+		outline: 1px dashed rgba(0,255,0,0.5); //DELETE ME
+	}
+
 	&-action {
-		color: white;
-		fill: white;
-		border-color: $c-blue-600;
-		background-color: $c-blue-600;
-		&:hover {
+		.btn {
+			color: white;
+			fill: white;
+			border-color: $c-blue-600;
+			background-color: $c-blue-600;
+		}
+		&:hover .btn {
 			border-color: $c-blue-700;
 			background-color: $c-blue-700;
 		}
-		&:active {
+		&:active .btn{
 			border-color: $c-blue-500;
 			background-color: $c-blue-500;
 		}
 		&-ghost {
-			color: $c-blue-700;
-			fill: $c-blue-700;
-			border-color: $c-blue-600;
-			&:hover {
+			.btn {
+				color: $c-blue-700;
+				fill: $c-blue-700;
+				border-color: $c-blue-600;
+			}
+			&:hover .btn {
 				color: white;
 				fill: white;
 				border-color: $c-blue-600;
 				background-color: $c-blue-600;
 			}
-			&:active {
+			&:active .btn{
 				color: white;
 				fill: white;
 				border-color: $c-blue-500;
@@ -77,30 +117,35 @@ $btn-padding: 2px;
 			}
 		}
 		&-transparent {
-			color: $c-blue-700;
-			fill: $c-blue-700;
-			&:hover {
+			.btn {
+				color: $c-blue-700;
+				fill: $c-blue-700;
+			}
+			&:hover .btn{
 				background-color: rgba(0, 0, 0, 0.2);
 			}
-			&:active {
+			&:active .btn{
 				background-color: rgba(0, 0, 0, 0.1);
 			}
 		}
 	}
 	// end of action
 	&-disabled {
-		color: white;
-		fill: white;
-		border-color: $c-gray-300;
-		background-color: $c-gray-300;
 		cursor: default;
-		&-ghost {
+		.btn {
+			color: white;
+			fill: white;
+			border-color: $c-gray-300;
+			background-color: $c-gray-300;
+			cursor: default;
+		}
+		&-ghost .btn{
 			color: $c-gray-400;
 			fill: $c-gray-400;
 			border-color: $c-gray-300;
 			cursor: default;
 		}
-		&-transparent {
+		&-transparent .btn{
 			color: $c-gray-400;
 			fill: $c-gray-400;
 			cursor: default;

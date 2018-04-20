@@ -7,8 +7,31 @@ import "./css/base.scss";
 
 const App = () => (
 	<div>
+		<h1>Clickable Area</h1>
+		<h2>Don't reserve space</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales eget elit ut aliquet. Nullam non interdum
+			tellus. Mauris sit amet enim risus. Maecenas volutpat et lectus sit amet fermentum.
+			<Button noReserveSpace size="xs" decoration="action">
+				{["foo", "lorem ipsum dolor", "bar"]}
+			</Button>
+			Proin vehicula euismod quam, ut consectetur metus pretium vitae. Donec efficitur volutpat turpis id consequat.
+			Vestibulum mattis feugiat felis, quis fermentum lacus consectetur nec. Aliquam erat volutpat. Phasellus gravida
+			elit ac sem pharetra, pretium efficitur tellus cursus.
+		</p>
+		<h2>Reserve space</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales eget elit ut aliquet. Nullam non interdum
+			tellus. Mauris sit amet enim risus. Maecenas volutpat et lectus sit amet fermentum.
+			<Button size="xs" decoration="action">
+				{["foo", "lorem ipsum dolor", "bar"]}
+			</Button>
+			Proin vehicula euismod quam, ut consectetur metus pretium vitae. Donec efficitur volutpat turpis id consequat.
+			Vestibulum mattis feugiat felis, quis fermentum lacus consectetur nec. Aliquam erat volutpat. Phasellus gravida
+			elit ac sem pharetra, pretium efficitur tellus cursus.
+		</p>
 		<h1>Decoration: Action</h1>
-		<h2>Different styleNames and sizes</h2>
+		<h2>Different styles and sizes</h2>
 		<Button size="xs" decoration="action">
 			{["foo", "bar"]}
 		</Button>&nbsp;
@@ -44,7 +67,7 @@ const App = () => (
 			{[<Icon name="life-ring-xl" />, "baz"]}
 		</Button>
 		<h1>Decoration: Disabled</h1>
-		<h2>Different styleNames and sizes</h2>
+		<h2>Different styles and sizes</h2>
 		<Button size="xs" decoration="disabled">
 			{["foo", "bar"]}
 		</Button>&nbsp;
