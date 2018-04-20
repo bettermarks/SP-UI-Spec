@@ -131,7 +131,9 @@ $btn-padding: 2px;
 	}
 	// end of action
 	&-disabled {
-		cursor: default;
+		&, &-ghost, &-transparent {
+			cursor: default;
+		}
 		.btn {
 			color: white;
 			fill: white;
