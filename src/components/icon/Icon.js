@@ -20,6 +20,12 @@ export default ({name}) => {
 					<path d="M23.98.73l-.71-.71L12 11.29.73.02.02.73 11.29 12 .02 23.27l.71.71L12 12.71l11.27 11.27.71-.71L12.71 12z" />
 				</svg>
 			);
+		case "times-s":
+			return (
+				<svg version="1" width="12" height="12">
+					<path d="M11.98.73l-.71-.71L6 5.29.73.02.02.73 5.29 6 .02 11.27l.71.71L6 6.71l5.27 5.27.71-.71L6.71 6z" />
+				</svg>
+			);
 		default:
 			return <div>foobar</div>;
 	}

@@ -20,12 +20,13 @@ $btn-padding: 2px;
 //button sizes
 .btn-size {
 	&-xs {
-		min-height: 24px;
+		min-height: 20px;
 		font-size: 10px;
 		line-height: 12px;
+		padding: $btn-padding $btn-padding;
 
 		.btnWrapper.reservespace & {
-			margin: 10px 0px; //24 + 10*2 = 44
+			margin: 12px 0px; //20 + 12*2 = 44
 		}
 	}
 	&-l {

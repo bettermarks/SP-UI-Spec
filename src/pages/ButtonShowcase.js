@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../components/button/Button";
 import Icon from "../components/icon/Icon";
 
-export default ({}) => {
+export default () => {
   return (
     <div>
       <h1>Clickable Area</h1>
@@ -10,9 +10,9 @@ export default ({}) => {
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales eget elit ut aliquet. Nullam non interdum
 			tellus. Mauris sit amet enim risus. Maecenas volutpat et lectus sit amet fermentum.
-			<Button noReserveSpace size="xs" decoration="action">
+			&nbsp;<Button noReserveSpace size="xs" decoration="action">
           {["foo", "lorem ipsum dolor", "bar"]}
-        </Button>
+        </Button>&nbsp;
         Proin vehicula euismod quam, ut consectetur metus pretium vitae. Donec efficitur volutpat turpis id consequat.
 			Vestibulum mattis feugiat felis, quis fermentum lacus consectetur nec. Aliquam erat volutpat. Phasellus gravida
 			elit ac sem pharetra, pretium efficitur tellus cursus.

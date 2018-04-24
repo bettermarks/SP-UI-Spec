@@ -1,0 +1,39 @@
+
+.border-left {
+  border-left-style: solid;
+}
+
+.border-right {
+  border-right-style: solid;
+}
+
+.border-top {
+  border-top-style: solid;
+}
+
+.border-bottom {
+  border-bottom-style: solid;
+}
+
+.border-thick {
+  border-width: $border-width-m;
+}
+
+.border-thin {
+  border-width: $border-width-s;
+}
+
+.barStyle-default {
+  background-color: transparent;
+  border-color: $c-area-border;
+}
+
+.barStyle-light {
+  background-color: $c-gray-100;
+  border-color: $c-area-border;
+}
+
+.barStyle-dark {
+  background-color: $c-gray-200;
+  border-color: $c-area-border;
+}
