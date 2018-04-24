@@ -3,6 +3,7 @@ import {render} from "react-dom";
 import ButtonShowcase from "./pages/ButtonShowcase";
 import SeriesplayerShowcase from "./pages/SeriesplayerShowcase";
 import Direction from "./components/direction/Direction";
+import Box from "./components/direction/Direction";
 
 import "./css/base.scss";
 class App extends React.Component {
@@ -42,8 +43,11 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Direction vertical fullsize first={this.selectorBox}>
-					{this.comp(this.state.value)}
+				<Direction vertical fullsize>
+					{this.selectorBox}
+					<Box stretch>
+						{this.comp(this.state.value)}
+					</Box>
 				</Direction>
 			</div>
 		)

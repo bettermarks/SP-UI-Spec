@@ -1,5 +1,6 @@
 import React from "react";
 import Bar from "../components/bar/Bar";
+import Box from "../components/direction/Box";
 import Button from "../components/button/Button";
 import CollapsibleSection from "../components/collapsibleSection/CollapsibleSection";
 import Direction from "../components/direction/Direction";
@@ -14,15 +15,20 @@ export default () => {
 
   let header = ([
     <Bar barStyle="dark" borderDirection="bottom">
-      <Direction stretch last={[
-        <Button size="l" decoration="action" styleName="">
-          {[<Icon name="life-ring-l" />, "Help"]}
-        </Button>,
-        <Button size="l" decoration="action" styleName="transparent">
-          {[<Icon name="times-xl" />]}
-        </Button>
-      ]}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      <Direction stretch paddingScheme="even">
+        <Box stretch>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+        </Box>
+        <Box>
+          <Button noReserveSpace size="l" decoration="action" styleName="">
+            {[<Icon name="life-ring-l" />, "Help"]}
+          </Button>
+        </Box>
+        <Box>
+          <Button noReserveSpace size="l" decoration="action" styleName="transparent">
+            {[<Icon name="times-xl" />]}
+          </Button>
+        </Box>
       </Direction>
     </Bar>
   ]);
@@ -33,10 +39,15 @@ export default () => {
     </Bar>
   ]);
   return (
-    <Direction stretch first={leftSidebar}>
-      <Direction stretch vertical first={header} last={footer}>
-        Content
-      </Direction>
+    <Direction stretch>
+      {leftSidebar}
+      <Box stretch>
+        <Direction stretch vertical>
+          {header}
+          <Box stretch>Content</Box>
+          {footer}
+        </Direction>
+      </Box>
     </Direction>
   );
 };

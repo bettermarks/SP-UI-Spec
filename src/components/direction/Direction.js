@@ -6,21 +6,19 @@ export default ({
   fullsize,
   vertical,
   stretch,
-  first,
-  last
+  paddingScheme
   }) => {
   stretch = stretch || fullsize; //fullsize implies stretch
   let className = [
     vertical ? "vLayout":"hLayout",
     fullsize ? "fullsize" : "",
-    stretch ? "stretch" : ""
+    stretch ? "stretch" : "",
+    paddingScheme ? `padding-scheme-${paddingScheme}` : ""
   ];
 
   return (
     <div className={className.join(" ")}>
-      {first}
-      <Box stretch={stretch}>{children}</Box>
-      {last}
+      {children}
     </div>
   );
 };

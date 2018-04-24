@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ children, stretch }) => {
+export default ({ children, stretch, paddingScheme }) => {
   let className = [
     "box",
     stretch ? "stretch" : ""
