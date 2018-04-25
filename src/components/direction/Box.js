@@ -4,7 +4,7 @@ export default ({ children, stretch, vAlign }) => {
   let className = [
     "box",
     stretch ? "stretch" : "",
-    vAlign ? `valign-${vAlign}` : "valign-top"
+    vAlign ? `valign-${vAlign}` : ""
   ];
   return (
     <div className={className.join(" ")}>

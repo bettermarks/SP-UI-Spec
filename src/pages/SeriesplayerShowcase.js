@@ -19,7 +19,7 @@ export default () => {
         <Box stretch vAlign="middle">
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         </Box>
-        <Box>
+        <Box vAlign="middle">
           <Button noReserveSpace size="l" decoration="action" styleName="">
             {[<Icon name="life-ring-l" />, "Help"]}
           </Button>

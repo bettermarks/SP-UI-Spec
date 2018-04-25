@@ -1,11 +1,11 @@
 .valign {
   &-top {
-    align-items: flex-start;
+    align-self: flex-start;
   }
   &-middle {
-    align-items: center;
+    align-self: center;
   }
   &-bottom {
-    align-items: flex-end;
+    align-self: flex-end;
   }
 }
