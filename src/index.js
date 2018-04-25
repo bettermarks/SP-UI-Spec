@@ -2,6 +2,7 @@ import React from "react";
 import {render} from "react-dom";
 import ButtonShowcase from "./pages/ButtonShowcase";
 import SeriesplayerShowcase from "./pages/SeriesplayerShowcase";
+import ContentBoxShowcase from "./pages/ContentBoxShowcase";
 import Direction from "./components/direction/Direction";
 import Box from "./components/direction/Direction";
 
@@ -9,7 +10,7 @@ import "./css/base.scss";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { value: 'SeriesplayerShowcase' };
+		this.state = { value: 'ButtonShowcase' };
 
 		this.handleChange = this.handleChange.bind(this);
 		this.comp = this.comp.bind(this);
@@ -19,6 +20,7 @@ class App extends React.Component {
 				<select value={this.state.value} onChange={this.handleChange}>
 					<option value="SeriesplayerShowcase">SeriesplayerShowcase</option>
 					<option value="ButtonShowcase">ButtonShowcase</option>
+					<option value="ContentBoxShowcase">ContentBoxShowcase</option>
 				</select>
 				&lt;-- Choose a page
 			</div>
@@ -35,6 +37,8 @@ class App extends React.Component {
 				return <SeriesplayerShowcase />;
 			case 'ButtonShowcase':
 				return <ButtonShowcase />;
+			case 'ContentBoxShowcase':
+				return <ContentBoxShowcase />;
 			default:
 				return <div>select one</div>;
 		}
