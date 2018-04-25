@@ -1,9 +1,10 @@
 import React from "react";
 
-export default ({ children, stretch, paddingScheme }) => {
+export default ({ children, stretch, vAlign }) => {
   let className = [
     "box",
-    stretch ? "stretch" : ""
+    stretch ? "stretch" : "",
+    vAlign ? `valign-${vAlign}` : "valign-top"
   ];
   return (
     <div className={className.join(" ")}>

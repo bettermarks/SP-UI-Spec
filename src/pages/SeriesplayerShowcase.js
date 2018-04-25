@@ -16,7 +16,7 @@ export default () => {
   let header = ([
     <Bar barStyle="dark" borderDirection="bottom">
       <Direction stretch paddingScheme="even">
-        <Box stretch>
+        <Box stretch vAlign="middle">
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         </Box>
         <Box>
