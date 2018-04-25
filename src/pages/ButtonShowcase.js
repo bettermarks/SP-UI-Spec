@@ -52,6 +52,76 @@ export default () => {
         {[<Icon name="life-ring-xl" />, "foo"]}
       </Button>{" "}
       &nbsp;
+    <h2>Button Color</h2>
+    <Button size="l" decoration="action" styleName="">
+      {[<Icon name="life-ring-l" />, "Action"]}
+    </Button>{" "}
+    <Button size="l" decoration="action" styleName="ghost">
+      {[<Icon name="life-ring-l" />, "Action"]}
+    </Button>{" "}
+    <Button size="l" decoration="action" styleName="transparent">
+      {[<Icon name="life-ring-l" />, "Action"]}
+    </Button>{" "}
+    <br />
+    <Button size="l" decoration="confirm" styleName="">
+      {[<Icon name="life-ring-l" />, "Confirm"]}
+    </Button>{" "}
+    <Button size="l" decoration="confirm" styleName="ghost">
+      {[<Icon name="life-ring-l" />, "Confirm"]}
+    </Button>{" "}
+    <Button size="l" decoration="confirm" styleName="transparent">
+      {[<Icon name="life-ring-l" />, "Confirm"]}
+    </Button>{" "}
+    <br />
+    <Button size="l" decoration="abort" styleName="">
+      {[<Icon name="life-ring-l" />, "Abort"]}
+    </Button>{" "}
+    <Button size="l" decoration="abort" styleName="ghost">
+      {[<Icon name="life-ring-l" />, "Abort"]}
+    </Button>{" "}
+    <Button size="l" decoration="abort" styleName="transparent">
+      {[<Icon name="life-ring-l" />, "Abort"]}
+    </Button>{" "}
+    <br />
+    <Button size="l" decoration="warning" styleName="">
+      {[<Icon name="life-ring-l" />, "Warning"]}
+    </Button>{" "}
+    <Button size="l" decoration="warning" styleName="ghost">
+      {[<Icon name="life-ring-l" />, "Warning"]}
+    </Button>{" "}
+    <Button size="l" decoration="warning" styleName="transparent">
+      {[<Icon name="life-ring-l" />, "Warning"]}
+    </Button>{" "}
+    <br />
+    <Button size="l" decoration="view" styleName="">
+      {[<Icon name="life-ring-l" />, "View"]}
+    </Button>{" "}
+    <Button size="l" decoration="view" styleName="ghost">
+      {[<Icon name="life-ring-l" />, "View"]}
+    </Button>{" "}
+    <Button size="l" decoration="view" styleName="transparent">
+      {[<Icon name="life-ring-l" />, "View"]}
+    </Button>{" "}
+    <br />
+    <h2>Button Sizes</h2>
+    <Button size="xs" decoration="action" styleName="">
+      {["Size xs"]}
+    </Button>{" "}
+    <Button size="s" decoration="action" styleName="">
+      {["Size s"]}
+    </Button>{" "}
+    <Button size="m" decoration="action" styleName="">
+      {["Size m"]}
+    </Button>{" "}
+    <Button size="l" decoration="action" styleName="">
+      {["Size l"]}
+    </Button>{" "}
+    <Button size="xl" decoration="action" styleName="">
+      {["Size xl"]}
+    </Button>{" "}
+    <Button size="xxl" decoration="action" styleName="">
+      {["Size xxl"]}
+    </Button>{" "}
 		<h2>Stretch Behavior</h2>
       <Button size="xs" stretch decoration="action" styleName="">
         {["foo"]}
