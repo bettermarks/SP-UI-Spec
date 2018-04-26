@@ -1,9 +1,13 @@
 import React from "react";
 
-export default () => {
+export default ({children, contentType}) => {
+  let className = [
+    'contentBox',
+    contentType ? `content-type-${contentType}` : ''
+  ];
   return (
-    <div className="contentBox">
-      Content box
+    <div className={className.join(" ")}>
+      {children}
     </div>
   );
 };
