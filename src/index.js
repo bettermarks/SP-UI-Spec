@@ -11,14 +11,15 @@ import "./css/base.scss";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { value: 'ContentBoxShowcase' };
+		this.state = { value: 'SeriesplayerShowcase' };
 
 		this.handleChange = this.handleChange.bind(this);
 		this.comp = this.comp.bind(this);
 
 		this.selectorBox = ([
-			<div>
+			<div key="sb">
 				<select value={this.state.value} onChange={this.handleChange}>
+					<option value="">Select One</option>
 					<option value="SeriesplayerShowcase">SeriesplayerShowcase</option>
 					<option value="ButtonShowcase">ButtonShowcase</option>
 					<option value="ContentBoxShowcase">ContentBoxShowcase</option>

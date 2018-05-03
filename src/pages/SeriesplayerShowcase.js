@@ -5,6 +5,7 @@ import Button from "../components/button/Button";
 import CollapsibleSection from "../components/collapsibleSection/CollapsibleSection";
 import Direction from "../components/direction/Direction";
 import Icon from "../components/icon/Icon";
+import NavDonut from "../components/navDonut/NavDonut";
 
 export default () => {
   let leftSidebar = ([
@@ -16,6 +17,9 @@ export default () => {
   let header = ([
     <Bar barStyle="dark" borderDirection="bottom">
       <Direction stretch paddingScheme="even">
+        <Box vAlign="middle">
+          <NavDonut currentExercise="22"/>
+        </Box>
         <Box stretch vAlign="middle">
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         </Box>
