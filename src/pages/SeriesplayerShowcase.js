@@ -18,7 +18,7 @@ export default () => {
     <Bar barStyle="dark" borderDirection="bottom">
       <Direction stretch paddingScheme="even">
         <Box vAlign="middle">
-          <NavDonut currentExercise="22"/>
+          <NavDonut currentExercise="2" progress="25"/>
         </Box>
         <Box stretch vAlign="middle">
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
