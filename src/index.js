@@ -6,6 +6,7 @@ import ContentBoxShowcase from "./pages/ContentBoxShowcase";
 import ContextNotificationShowcase from "./pages/ContextNotificationShowcase";
 import Direction from "./components/direction/Direction";
 import Box from "./components/direction/Direction";
+import Modal from "./components/modal/Modal";
 
 import "./css/base.scss";
 class App extends React.Component {
@@ -58,6 +59,7 @@ class App extends React.Component {
 						{this.comp(this.state.value)}
 					</Box>
 				</Direction>
+				<Modal desktop/>
 			</div>
 		)
 	}

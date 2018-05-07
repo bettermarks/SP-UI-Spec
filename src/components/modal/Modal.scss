@@ -1,0 +1,39 @@
+.shadowbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.36);
+}
+
+.modal {
+  background-color: white;
+  height: 100%;
+
+  &-title {
+    border-bottom: 1px solid $c-gray-500;
+    color: $c-text-dark;
+    padding: 0 $space-s;
+    &-text {
+      text-align: center;
+      flex-direction: column;
+      margin-right: 32px;
+    }
+  }
+  &-content {
+    padding: $space-s;
+    color: $c-text-medium;
+    & > div > * {
+      margin-bottom: $space-s;
+    }
+  }
+
+  &.desktop {
+    height: calc(100% - #{$space-s*2});
+    margin: $space-s auto;
+    max-width: 300px;
+    border: 1px solid $c-gray-500;
+    box-shadow:  0 0 $shadow-blur-medium 0 $c-shadow-light;
+  }
+}

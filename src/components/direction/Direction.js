@@ -6,14 +6,16 @@ export default ({
   fullsize,
   vertical,
   stretch,
-  paddingScheme
+  paddingScheme,
+  classes
   }) => {
   stretch = stretch || fullsize; //fullsize implies stretch
   let className = [
     vertical ? "vLayout":"hLayout",
     fullsize ? "fullsize" : "",
     stretch ? "stretch" : "",
-    paddingScheme ? `padding-scheme-${paddingScheme}` : ""
+    paddingScheme ? `padding-scheme-${paddingScheme}` : "",
+    classes ? classes : ""
   ];
 
   return (
