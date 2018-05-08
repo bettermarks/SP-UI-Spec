@@ -8,7 +8,7 @@ import Direction from "./components/direction/Direction";
 import Box from "./components/direction/Direction";
 import Modal from "./components/modal/Modal";
 
-import "./css/base.scss";
+import "./styles.scss";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
