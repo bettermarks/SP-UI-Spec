@@ -3,8 +3,9 @@ import Direction from "../direction/Direction";
 import Box from "../direction/Box";
 import Icon from "../icon/Icon";
 import Button from "../button/Button";
+import ModalContent from "./ModalContent";
 
-export default ({desktop, children}) => {
+export default ({desktop, type}) => {
   let classNames = [
     "modal",
     desktop ? "desktop" : "mobile"
@@ -19,11 +20,7 @@ export default ({desktop, children}) => {
             </Button>
             <Box stretch vAlign="middle" classes="modal-title-text">My Modal Title</Box>
           </Direction>
-          <Box stretch classes="modal-content">
-            <div>
-              {children}
-            </div>
-          </Box>
+          <ModalContent type={type} />
         </Direction>
       </div>
     </div>
