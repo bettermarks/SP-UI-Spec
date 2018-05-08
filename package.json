@@ -10,7 +10,8 @@
   "dependencies": {
     "lodash": "4.17.5",
     "react": "16.2.0",
-    "react-dom": "16.2.0"
+    "react-dom": "16.2.0",
+    "react-responsive": "4.1.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.7.1"

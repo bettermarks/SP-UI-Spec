@@ -7,6 +7,7 @@ import ContextNotificationShowcase from "./pages/ContextNotificationShowcase";
 import Direction from "./components/direction/Direction";
 import Box from "./components/direction/Direction";
 import Modal from "./components/modal/Modal";
+import MediaQuery from "react-responsive";
 
 import "./styles.scss";
 class App extends React.Component {
@@ -59,7 +60,15 @@ class App extends React.Component {
 						{this.comp(this.state.value)}
 					</Box>
 				</Direction>
-				<Modal desktop/>
+				<MediaQuery minWidth={450}>
+					{(matches)=>{
+						if(matches){
+							return <Modal desktop />
+						} else {
+							return <Modal />
+						}
+					}}
+				</MediaQuery>
 			</div>
 		)
 	}
