@@ -11,24 +11,7 @@
 .modal {
   background-color: white;
   height: 100%;
-
-  &-title {
-    border-bottom: 1px solid $c-gray-500;
-    color: $c-text-dark;
-    padding: 0 $space-s;
-    &-text {
-      text-align: center;
-      flex-direction: column;
-      margin-right: 32px;
-    }
-  }
-  &-content {
-    padding: $space-s;
-    color: $c-text-medium;
-    & > div > * {
-      margin-bottom: $space-s;
-    }
-  }
+  box-sizing: border-box;
 
   &.desktop {
     height: calc(100% - #{$space-s*2});

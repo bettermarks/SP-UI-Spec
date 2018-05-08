@@ -2,7 +2,6 @@ import React from "react";
 import Bar from "../components/bar/Bar";
 import Box from "../components/direction/Box";
 import Button from "../components/button/Button";
-import CollapsibleSection from "../components/collapsibleSection/CollapsibleSection";
 import Direction from "../components/direction/Direction";
 import Icon from "../components/icon/Icon";
 import NavDonut from "../components/navDonut/NavDonut";
@@ -29,7 +28,7 @@ export default () => {
           </Button>
         </Box>
         <Box>
-          <Button noReserveSpace size="l" decoration="action" styleName="transparent">
+          <Button click={()=>{openModal("QuitModal")}} noReserveSpace size="l" decoration="action" styleName="transparent">
             {[<Icon name="times-xl" />]}
           </Button>
         </Box>

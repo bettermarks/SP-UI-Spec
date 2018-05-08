@@ -1,0 +1,21 @@
+@import "../../css/base.scss";
+
+.quitmodalcontent {
+  .title {
+    border-bottom: 1px solid $c-gray-500;
+    color: $c-text-dark;
+    padding: 0 $space-s;
+    &-text {
+      text-align: center;
+      flex-direction: column;
+      margin-right: 32px;
+    }
+  }
+  .content {
+    padding: $space-s;
+    color: $c-text-medium;
+    & > * {
+      margin-bottom: $space-s;
+    }
+  }
+}

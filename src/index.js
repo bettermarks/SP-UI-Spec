@@ -2,8 +2,6 @@ import React from "react";
 import {render} from "react-dom";
 import ButtonShowcase from "./pages/ButtonShowcase";
 import SeriesplayerShowcase from "./pages/SeriesplayerShowcase";
-import ContentBoxShowcase from "./pages/ContentBoxShowcase";
-import ContextNotificationShowcase from "./pages/ContextNotificationShowcase";
 import Direction from "./components/direction/Direction";
 import Box from "./components/direction/Direction";
 import Modal from "./components/modal/Modal";
@@ -13,10 +11,17 @@ import "./styles.scss";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { value: 'SeriesplayerShowcase' };
+		this.state = { 
+			value: 'SeriesplayerShowcase',
+			modal: ''
+		};
 
 		this.handleChange = this.handleChange.bind(this);
 		this.comp = this.comp.bind(this);
+
+		this.openModal = this.openModal.bind(this);
+
+		window.openModal = this.openModal;
 
 		this.selectorBox = ([
 			<div key="sb">
@@ -24,8 +29,6 @@ class App extends React.Component {
 					<option value="">Select One</option>
 					<option value="SeriesplayerShowcase">SeriesplayerShowcase</option>
 					<option value="ButtonShowcase">ButtonShowcase</option>
-					<option value="ContentBoxShowcase">ContentBoxShowcase</option>
-					<option value="ContextNotificationShowcase">ContextNotificationShowcase</option>
 				</select>
 				&lt;-- Choose a page
 			</div>
@@ -42,13 +45,15 @@ class App extends React.Component {
 				return <SeriesplayerShowcase />;
 			case 'ButtonShowcase':
 				return <ButtonShowcase />;
-			case 'ContentBoxShowcase':
-				return <ContentBoxShowcase />;
-			case 'ContextNotificationShowcase':
-				return <ContextNotificationShowcase />;
 			default:
 				return <div>select one</div>;
 		}
+	}
+
+	openModal(which) {
+		this.setState({
+			modal: which
+		});
 	}
 
 	render() {
@@ -60,15 +65,10 @@ class App extends React.Component {
 						{this.comp(this.state.value)}
 					</Box>
 				</Direction>
-				<MediaQuery minWidth={450}>
-					{(matches)=>{
-						if(matches){
-							return <Modal desktop />
-						} else {
-							return <Modal />
-						}
-					}}
-				</MediaQuery>
+				{
+					this.state.modal &&
+					<Modal name={this.state.modal}/>
+				}
 			</div>
 		)
 	}

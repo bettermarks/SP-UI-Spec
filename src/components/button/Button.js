@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({children, noReserveSpace, stretch, decoration, styleName, size}) => {
+export default ({children, click, noReserveSpace, stretch, decoration, styleName, size}) => {
 	let wrapperClassName = [
 		"btnWrapper",
 		noReserveSpace ? "noreservespace" : "reservespace",
@@ -11,7 +11,7 @@ export default ({children, noReserveSpace, stretch, decoration, styleName, size}
 		`btn-size-${size}`];
 
 	return (
-		<div className={wrapperClassName.join(" ")}>
+		<div className={wrapperClassName.join(" ")} onClick={click}>
 			<div className={className.join(" ")}>
 				{children.map((e, i) => {
 					return (
