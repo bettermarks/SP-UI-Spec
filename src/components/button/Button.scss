@@ -37,15 +37,16 @@ $btn-transparency-active: rgba(0, 0, 0, 0.1);
     line-height: 14px;
     padding: $btn-padding $btn-padding;
     .btnWrapper.reservespace & {
-      margin: 4px 0px; //36 + 4*2 = 44
+      margin: 10px 0px; //24 + 10*2 = 44
     }
   }
 	&-m { // TBD
     min-height: 28px;
     font-size: 16px;
     line-height: 20px;
+    padding: $btn-padding $btn-padding;
     .btnWrapper.reservespace & {
-      margin: 4px 0px; //36 + 4*2 = 44
+      margin: 8px 0px; //28 + 8*2 = 44
     }
   }
   &-l {
