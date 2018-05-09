@@ -23,7 +23,7 @@ export default () => {
         <Box stretch vAlign="middle">
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         </Box>
-        <Box vAlign="middle">
+        <Box>
           <Button noReserveSpace size="l" decoration="action" styleName="">
             {[<Icon name="life-ring-l" />, "Help"]}
           </Button>
@@ -51,6 +51,8 @@ export default () => {
           <Box stretch classes="contentWrapper">
             <div className="content">
               <CollapsibleSection decoration="action"/>
+              <CollapsibleSection decoration="confirm" />
+              <CollapsibleSection decoration="abort" />
             </div>
           </Box>
           {footer}
