@@ -5,6 +5,7 @@ import Button from "../components/button/Button";
 import Direction from "../components/direction/Direction";
 import Icon from "../components/icon/Icon";
 import NavDonut from "../components/navDonut/NavDonut";
+import CollapsibleSection from "../components/collapsibleSection/CollapsibleSection";
 
 export default () => {
   let leftSidebar = ([
@@ -42,12 +43,16 @@ export default () => {
     </Bar>
   ]);
   return (
-    <Direction stretch>
+    <Direction stretch classes="seriesPlayerShowcase">
       {leftSidebar}
       <Box stretch>
         <Direction stretch vertical>
           {header}
-          <Box stretch>Content</Box>
+          <Box stretch classes="contentWrapper">
+            <div className="content">
+              <CollapsibleSection decoration="action"/>
+            </div>
+          </Box>
           {footer}
         </Direction>
       </Box>

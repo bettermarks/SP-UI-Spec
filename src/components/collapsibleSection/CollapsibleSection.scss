@@ -1,0 +1,48 @@
+@import "../../css/base.scss";
+
+.collapsibleSection {
+  border: $border-width-l solid;
+  border-radius: $border-radius-m;
+
+  .heading {
+    padding: 0px $space-xs;
+    font-weight: 600;
+  }
+
+  .content {
+    padding: 0 $space-xs $space-xs $space-xs;
+    overflow-y: hidden;
+    max-height: 100%;
+    transition: max-height 2s, padding 0s 0s;
+
+    &.collapsed {
+      max-height: 0px;
+      padding: 0px $space-xs;
+      transition: max-height 1s, padding 0.3s 0.3s;
+    }
+  }
+
+  &.action {
+    border-color: $c-blue-500;
+    
+    .heading {
+      color: $c-blue-700;
+    }
+  }
+
+  &.confirm {
+    border-color: $c-green-500;
+    
+    .heading {
+      color: $c-green-700;
+    }
+  }
+
+  &.abort {
+    border-color: $c-red-500;
+    
+    .heading {
+      color: $c-red-700;
+    }
+  }
+}
