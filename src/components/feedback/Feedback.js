@@ -14,26 +14,31 @@ export default class Feedback extends React.Component {
 
   render() {
     return (
-      <div className={this.classnames.join(" ")}>
         <MediaQuery minWidth={700}>
           {(matches) => {
             if (matches) {
+              this.classnames.push('desktop');
+              
               return(
+                <div className={this.classnames.join(" ")}>
                 <Box vAlign="middle">
                   That is wrong
                 </Box>
+                </div>
               )
             }
             else {
               return (
+                <div className={this.classnames.join(" ")}>
                 <Box stretch vAlign="middle">
                   That is wrong
                 </Box>
+                </div>
               )
             }
           }}
         </MediaQuery>
-      </div>
+
     );
   }
 };

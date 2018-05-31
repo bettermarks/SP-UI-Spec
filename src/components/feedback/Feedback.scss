@@ -2,8 +2,10 @@
 
 .feedback {
   border: $border-width-s solid;
-  display: inline-flex;
+  display: flex;
   flex: 0 1 auto;
+  padding: $space-xs;
+  font-size: $font-size-s;
 
   .content {
     padding: 0 $space-xs $space-xs $space-xs;
@@ -28,6 +30,10 @@
     border-color: $c-red-500;
     background-color: $c-red-200;
     color: $c-red-700;
+  }
+
+  &.desktop {
+    display: inline-flex;
   }
 }
 
