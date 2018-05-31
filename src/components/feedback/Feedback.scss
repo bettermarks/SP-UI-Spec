@@ -1,0 +1,31 @@
+@import "../../css/base.scss";
+
+.feedback {
+  border: $border-width-s solid;
+  // border-radius: $border-radius-m;
+
+  .content {
+    padding: 0 $space-xs $space-xs $space-xs;
+    max-height: 100%;
+
+  }
+
+  &.action {
+    border-color: $c-blue-500;
+    background-color: $c-blue-200;
+    color: $c-blue-700;
+  }
+
+  &.confirm {
+    border-color: $c-green-500;
+    background-color: $c-green-200;
+    color: $c-green-700;
+
+  }
+
+  &.abort {
+    border-color: $c-red-500;
+    background-color: $c-red-200;
+    color: $c-red-700;
+  }
+}

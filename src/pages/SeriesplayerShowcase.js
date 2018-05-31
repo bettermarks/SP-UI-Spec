@@ -5,6 +5,7 @@ import Button from "../components/button/Button";
 import Direction from "../components/direction/Direction";
 import Icon from "../components/icon/Icon";
 import NavDonut from "../components/navDonut/NavDonut";
+import Feedback from "../components/feedback/Feedback";
 import CollapsibleSection from "../components/collapsibleSection/CollapsibleSection";
 
 export default () => {
@@ -53,6 +54,8 @@ export default () => {
               <CollapsibleSection decoration="action"/>
               <CollapsibleSection decoration="confirm" />
               <CollapsibleSection decoration="abort" />
+              <br />
+              <Feedback decoration="abort" />
             </div>
           </Box>
           {footer}
