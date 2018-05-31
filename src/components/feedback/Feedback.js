@@ -19,14 +19,14 @@ export default class Feedback extends React.Component {
           {(matches) => {
             if (matches) {
               return(
-                <Box stretch vAlign="middle">
+                <Box vAlign="middle">
                   That is wrong
                 </Box>
               )
             }
             else {
               return (
-                <Box vAlign="middle">
+                <Box stretch vAlign="middle">
                   That is wrong
                 </Box>
               )
