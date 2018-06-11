@@ -1,0 +1,41 @@
+@import "../../css/base.scss";
+
+.exerciseNavButton {
+  position: relative;
+  &.correct,&.remark,&.error {
+    & > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 12px;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &.correct {
+    color: $c-green-700;
+    fill: $c-green-600;
+  }
+  &.remark {
+    color: $c-yellow-700;
+    fill: $c-yellow-600;
+  }
+  &.error {
+    color: $c-red-700;
+    fill: $c-red-600;
+  }
+}
+
+.exerciseNavButton.default {
+  min-width: 36px;
+  max-width: 36px;
+  height: 36px;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

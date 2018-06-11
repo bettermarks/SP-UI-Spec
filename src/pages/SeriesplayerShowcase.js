@@ -7,11 +7,15 @@ import Icon from "../components/icon/Icon";
 import NavDonut from "../components/navDonut/NavDonut";
 import Feedback from "../components/feedback/Feedback";
 import CollapsibleSection from "../components/collapsibleSection/CollapsibleSection";
+import ExerciseNavButton from "../components/exerciseNavButton/ExerciseNavButton";
 
 export default () => {
   let leftSidebar = ([
     <Bar barStyle="dark" borderDirection="right">
-      lside
+      <ExerciseNavButton decoration="" exerciseNumber="1" />
+      <ExerciseNavButton decoration="correct" exerciseNumber="2" />
+      <ExerciseNavButton decoration="remark" exerciseNumber="3" />
+      <ExerciseNavButton decoration="error" exerciseNumber="4" />
     </Bar>
   ]);
 
