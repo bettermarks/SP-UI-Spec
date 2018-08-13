@@ -28,11 +28,13 @@ export default () => {
         eget elit ut aliquet. Nullam non interdum tellus. Mauris sit amet enim
         risus. Maecenas volutpat et lectus sit amet fermentum.
         <Button size="xs" decoration="action">
-          {["foo", "lorem ipsum dolor", "bar"]}
+          {["square", <div style={{width: "50px", height: "50px", backgroundColor: "tomato"}}></div>, "50x50"]}
         </Button>
         Proin vehicula euismod quam, ut consectetur metus pretium vitae. Donec
         efficitur volutpat turpis id consequat. Vestibulum mattis feugiat felis,
-        quis fermentum lacus consectetur nec. Aliquam erat volutpat. Phasellus
+        quis fermentum lacus consectetur nec. <Button size="xs" decoration="action">
+          {["foo", "bar"]}
+        </Button>Aliquam erat volutpat. Phasellus
         gravida elit ac sem pharetra, pretium efficitur tellus cursus.
       </p>
       <h1>Decoration: Action</h1>

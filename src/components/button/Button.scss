@@ -4,6 +4,10 @@ $btn-padding: 2px;
 $btn-transparency-hover: rgba(0, 0, 0, 0.2);
 $btn-transparency-active: rgba(0, 0, 0, 0.1);
 
+.btnWrapper {
+  outline: 1px dashed red;
+}
+
 .btn {
   box-sizing: border-box;
   display: inline-flex;
@@ -27,55 +31,35 @@ $btn-transparency-active: rgba(0, 0, 0, 0.1);
     font-size: 10px;
     line-height: 12px;
     padding: $btn-padding $btn-padding;
-    .btnWrapper.reservespace & {
-      margin: 12px 0px; //20 + 12*2 = 44
-    }
   }
 	&-s { // TBD
     min-height: 24px;
     font-size: 12px;
     line-height: 14px;
     padding: $btn-padding $btn-padding;
-    .btnWrapper.reservespace & {
-      margin: 10px 0px; //24 + 10*2 = 44
-    }
   }
 	&-m { // TBD
     min-height: 28px;
     font-size: 16px;
     line-height: 20px;
     padding: $btn-padding $btn-padding;
-    .btnWrapper.reservespace & {
-      margin: 8px 0px; //28 + 8*2 = 44
-    }
   }
   &-l {
     min-height: 36px;
     font-size: 18px;
     line-height: 20px;
-    .btnWrapper.reservespace & {
-      margin: 4px 0px; //36 + 4*2 = 44
-    }
   }
 	&-xl { // TBD
     min-height: 48px;
     font-size: 24px;
     line-height: 28px;
     padding: 4px*2 4px;
-    //not necessary to reserve space because 56 > $min-clickable-height
-    & > .child {
-      padding: 0 4px;
-    }
   }
   &-xxl {
     min-height: 56px;
     font-size: 32px;
     line-height: 28px;
     padding: 4px*2 4px;
-    //not necessary to reserve space because 56 > $min-clickable-height
-    & > .child {
-      padding: 0 4px;
-    }
   }
 }
 
@@ -108,9 +92,10 @@ $btn-transparency-active: rgba(0, 0, 0, 0.1);
       transform: translateY(-50%);
     }
   }
-
   &.reservespace {
-    // outline: 1px dashed rgba(0, 255, 0, 0.5); //DELETE ME
+    // outline: 1px dashed rgba(0, 255, 0, 0.5); //DELETE ME  
+    min-height: $min-clickable-height;
+    align-items: center;
   }
 
   &-action {
